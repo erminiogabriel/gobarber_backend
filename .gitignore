@@ -1,4 +1,5 @@
 node_modules/
+coverage/
 .vscode/
 build/
 temp/
@@ -6,3 +7,5 @@ temp/
 
 tmp/*
 !tmp/.gitkeep
+
+yarn.lock
