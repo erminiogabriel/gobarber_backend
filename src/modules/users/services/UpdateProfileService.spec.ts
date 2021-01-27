@@ -99,4 +99,13 @@ describe('UpdateProfile', () => {
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
+  it('should not be able to update the profile from non existing user', async () => {
+    expect(
+      updateProfileService.execute({
+        name: 'gabriel',
+        email: 'gabriel@gobarber.com.br',
+        user_id: 'non-existing-user-id',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
+  });
 });
